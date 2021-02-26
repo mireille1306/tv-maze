@@ -22,9 +22,9 @@
   export default {
     computed: {
       ...mapState({
-        episodes: state => state.list.episodes,
-        sorting: state => state.list.sorting,
-        totalSeasons: state => state.list.totalSeasons
+        episodes: state => state.episodes.episodes,
+        sorting: state => state.episodes.sorting,
+        totalSeasons: state => state.episodes.totalSeasons
       })
     },
     data() {
