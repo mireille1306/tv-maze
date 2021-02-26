@@ -70,7 +70,7 @@
        */
       getEpisodeData() {
         axios.get(
-          `http://api.tvmaze.com/shows/${this.seriesId}/episodebynumber?season=${this.$route.query.season}&number=${this.$route.query.number}?embed=show`
+          `https://api.tvmaze.com/shows/${this.seriesId}/episodebynumber?season=${this.$route.query.season}&number=${this.$route.query.number}?embed=show`
         ).then(result => {
           this.episodeDetails = result.data;
         })
@@ -80,7 +80,7 @@
        * Get the show details
        */
       getShowData() {
-        axios.get(`http://api.tvmaze.com/shows/${this.seriesId}`).then(result => {
+        axios.get(`https://api.tvmaze.com/shows/${this.seriesId}`).then(result => {
           this.showDetails = result.data;
         })
       },
@@ -89,7 +89,7 @@
        * Get the cast details
        */
       getCastData() {
-        axios.get(`http://api.tvmaze.com/shows/${this.seriesId}/cast`).then(result => {
+        axios.get(`https://api.tvmaze.com/shows/${this.seriesId}/cast`).then(result => {
           this.cast = result.data;
         })
       }

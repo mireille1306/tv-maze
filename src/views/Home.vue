@@ -54,7 +54,7 @@
        * Get the tv show data
        */
       getData(callback) {
-        axios.get(`http://api.tvmaze.com/shows/${this.seriesId}?embed=episodes`).then(result => {
+        axios.get(`https://api.tvmaze.com/shows/${this.seriesId}?embed=episodes`).then(result => {
           callback(result);
         }).catch(error => {
           this.error = true;
